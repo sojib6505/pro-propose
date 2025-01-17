@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal 💖</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        #response {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Marry Me? 💍 <br>
+    Mis Ornila Orni</h1>
+    <p>Please choose your answer below:</p>
+    <div>
+        <button class="yes" onclick="showResponse(true)">Yes, I will! ❤️</button>
+        <button class="no" onclick="showResponse(false)">No, sorry 😢</button>
+    </div>
+    <div id="response"></div>
+
+    <script>
+        function showResponse(answer) {
+            const responseDiv = document.getElementById('response');
+            if (answer) {
+                responseDiv.innerHTML = "Yay! I’m the happiest person in the world! 💍🎉";
+                responseDiv.style.color = "#4caf50";
+            } else {
+                responseDiv.innerHTML = "Oh no! 😢 But I respect your decision.";
+                responseDiv.style.color = "#f44336";
+            }
+        }
+    </script>
+</body>
+</html>
